@@ -1,0 +1,9 @@
+A small program meant to create a persistant object in memory that can be accessed between programs, and which will not close when accessing programs finish. 
+The primary program here is manage_mem, which can create and delete the memory object.
+The access_mem program is merely meant as an example of how to access the created memory object.
+
+Both programs need a "file location" to save the data to.
+The key here is to make sure you pick a file location which is actually RAM space.
+This means you need to locate a 'tmpfs' location on the computer you are working on.
+To do this, you can run the command 'df -T', which will list the filesystems of the various partitions on the computer.
+Locate a tmpfs filesystem you have access to, pick a filename, and give that as the filepath argument to the programs.
